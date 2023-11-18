@@ -159,6 +159,10 @@ img {
   .grid-container {
       grid-template-columns: 1fr; 
   }
+  
+  .left-side {
+      display: none;
+  }
 }
 
 
