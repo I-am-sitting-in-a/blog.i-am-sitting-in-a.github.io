@@ -130,17 +130,37 @@ img {
   background: $lightGray;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
 }
 
-.clearfix:after {
-    clear: both;
+.left-side, .right-side {
+  align-self: start; 
 }
+
+.left-side {
+  position: sticky;
+  top: 0; 
+}
+
+.left-side img {
+  width: 100%;
+  height: 100dvh;
+}
+
+.right-side {
+  /* Add styles for blog container */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr; 
+  }
+}
+
 
 /*********************/
 /* LAYOUT / SECTIONS */
